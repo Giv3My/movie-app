@@ -7,10 +7,12 @@ import { MovieListing } from '../components';
 
 function Home() {
   const dispatch = useDispatch();
+  const movieText = 'Harry';
+  const showText = 'Friends';
 
   React.useEffect(() => {
-    dispatch(fetchMovies());
-    dispatch(fetchShows());
+    dispatch(fetchMovies(movieText));
+    dispatch(fetchShows(showText));
   }, []);
 
   return (
